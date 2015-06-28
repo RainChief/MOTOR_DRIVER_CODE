@@ -31,10 +31,10 @@ void left_turn();
 ISR(TIMER0_COMPA_vect){
 	
 	if ((PIND & _BV(0)) == 0){
-		PORTB ^= (_BV(0) | _BV(1));			//Xor port B (toggles output)
-								//explicitly turn off BV0
+		PORTB ^= (_BV(0) | _BV(1));		//Xor port B (toggles output)
+							//explicitly turn off BV0
 		//PORTB ^= _BV(1);	
-								//turn on BV1
+							//turn on BV1
 		
 		}else if ((PIND & _BV(0)) == 1){
 		PORTB ^= _BV(1);
