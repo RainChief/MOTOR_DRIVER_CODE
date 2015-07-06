@@ -15,6 +15,11 @@
 	H	|	L	|	Brake
 */
 
+/* Motor 1 = IN1 = 1
+	     IN2 = 3
+   Motor 2 = IN1 = 2
+             IN2 = 4
+*/
 
 //Equation for waveform frequency
 
@@ -143,24 +148,28 @@ void motor_R_TURN()
 //RIGHT MOTOR CW
  void motorR_CW()
  {
+	 PORTB = 0x00;
 	 PORTB ^= (_BV(3) | _BV(1));
  }
  
 //LEFT MOTOR CCW
  void motorL_CW()
  {
+	 PORTB = 0X00;
 	 PORTB ^= (_BV(4) | _BV(2));
  }
  
 //RIGHT MOTOR CCW 
  void motorR_CCW()
  {
+	 PORTB = 0x00;
 	 PORTB ^= (_BV(1));
  }
  
 //LEFT MOTOR CW
  void motorL_CCW()
  {
+	 PORTB = 0x00;
 	 PORTB ^= (_BV(2));
  }
 
